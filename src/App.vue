@@ -12,6 +12,7 @@ export default {
 
   methods: {
     async fetchQuote() {
+      this.loading = true
       try {
         const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
           method: 'GET',
@@ -43,14 +44,17 @@ export default {
 <template>
   <div class="app">
     <template v-if="!error">
-      <div class="quote" v-if="loading">Loading...</div>
+      <div class="loading" v-if="loading">Loading...</div>
       <template v-else>
         <h1 class="quote">{{ quote.quote }}</h1>
-        <p class="author">-{{ quote.author }}</p>
+        <div class="container">
+          <button class="button" @click="fetchQuote">More</button>
+          <p class="author">-{{ quote.author }}</p>
+        </div>
       </template>
     </template>
     <div v-else class="error">
-      Something went wrong... Please, try again later or refresh your page
+      Something went wrong...<br /> Please, try again later or refresh your page
     </div>
   </div>
 </template>
