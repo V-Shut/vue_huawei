@@ -16,7 +16,6 @@ export default {
       this.loading = true
       try {
         const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
-          method: 'GET',
           headers: {
             'X-Api-Key': 'o45M6E68HIpi/yBhHjXbzg==2WN4rgz5KuV0KUzO',
           },
@@ -80,7 +79,7 @@ export default {
       Please, try again later or refresh your page
     </div>
     <div class="history" :class="{ open: activeList }">
-      <button class="open_list" @click="toggleList">Open</button>
+      <button class="open_list" @click="toggleList">{{ activeList ? 'Close' : 'Open'}}</button>
       <div class="elements">
         <li class="element" v-for="(obj, index) in historyList" :key="index" @click="quote = obj">
           {{ obj.quote }}
