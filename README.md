@@ -1,35 +1,77 @@
-# huawei_test
+# Huawei Test Project
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a Vue.js application that fetches and displays quotes from an API, with functionality to copy quotes and save them to the history. It also supports viewing previously fetched quotes.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Fetches a random quote from an API on each update.
+- Copies the quote to the clipboard with a "Copied!" message.
+- Saves and displays a history of previously fetched quotes.
+- Displays an error message when there is an issue with the API or network.
 
-## Customize configuration
+## Technologies
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Vue.js** (version 3)
+- **Vite** — a fast development tool
+- **Axios** — for HTTP requests (API calls)
+- **Clipboard API** — for copying quotes
 
-## Project Setup
+## Installation
 
-```sh
-npm install
-```
+To run the project locally, follow these steps:
 
-### Compile and Hot-Reload for Development
+1. Clone the repository:
 
-```sh
-npm run dev
-```
+    ```bash
+    git clone https://github.com/yourusername/huawei_test.git
+    ```
 
-### Compile and Minify for Production
+2. Navigate to the project directory:
 
-```sh
-npm run build
-```
+    ```bash
+    cd huawei_test
+    ```
 
-### Lint with [ESLint](https://eslint.org/)
+3. Install dependencies:
 
-```sh
-npm run lint
-```
+    ```bash
+    npm install
+    ```
+
+4. Start the local development server:
+
+    ```bash
+    npm run start
+    ```
+
+5. Open the application in your browser at [this link](https://vue-huawei.vercel.app/).
+
+## Project Structure
+
+- `src/` — source code of the project.
+  - `components/` — components for displaying quotes and buttons.
+  - `App.vue` — the main component of the app.
+
+- `vite.config.js` — configuration for Vite.
+
+- `package.json` — file with dependencies and project scripts.
+
+## Production Build
+
+To build and preview the project for production:
+
+1. Build the project:
+
+    ```bash
+    npm run build
+    ```
+
+2. Preview the production build:
+
+    ```bash
+    npm run preview
+    ```
+
+## License
+
+This project is open-source and available under the MIT license.
